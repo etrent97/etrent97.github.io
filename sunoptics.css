@@ -1,0 +1,143 @@
+/*
+Sun Optical Eyewear
+
+Author: Elijah Trent
+
+Date: July 17, 2017
+
+*/
+
+/*configures background image in body and wraps acroos homepage*/
+body 	{background-color: #FFFFFF;
+		 font-family: Arial, Verdana, sans-serif;
+		 background-image: url(sunglass.jpg);
+		 background-size: 10%;
+		 background-repeat: round;
+	
+}
+
+/*creates a jpg image in the header*/
+header {height: 150px;
+		margin-bottom: 0;
+		background-image: url(title.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		background-color:  #F0B27A;
+		padding: 1em;
+		border-bottom: 2px solid #17202A;
+}
+h1 	    {text-indent: 100%;
+		 white-space: nowrap;
+		 overflow: hidden;
+}
+h2		{color: #17202A;
+		 text-shadow: 2px 2px 0  #CCD1D1;
+}
+
+/*gives attributes to the navigation bar*/
+nav {background-color: #CCD1D1;
+	 font-weight: bold;
+	 font-size: 20px;
+	 text-align: center;
+	 word-spacing: 23px;
+	 padding-bottom: 10px;
+	 padding-top: 10px;
+	 border-bottom: 2px solid #17202A;
+}
+nav a   {text-decoration: none;
+		 background-color: #CCD1D1;
+		 border-bottom: #EAEAEA;
+}
+nav a:link {color: #17202A;
+}
+nav a:visited {color: #FFFFFF;
+}
+nav a:hover {color: #F0B27A;
+}	
+
+main	{padding-left: 20px;
+		 padding-right: 20px;
+		 background-color: #FFFFFF;
+		 padding-top: 1px;
+		 padding-bottom: 1px;
+         display: block;
+}
+
+/*creates small font sizing for header*/
+footer	{font-size: .70em;
+		 font-style: italic;
+		 text-align: center;
+		 padding: 10px;
+		 background-color: #FFFFFF;
+		
+}
+/*wrapper id adds box shadow to content and centers it in a box*/
+#wrapper{margin-left: auto;
+		 margin-right: auto;
+		 width: 80%;
+		 background-color: #FFFFFF;
+		 min-width: 700px;
+		 max-width: 1024px;
+		 box-shadow: 2px 2px 2px #CCD1D1;
+}
+
+/*adds brands to brands page with centered content*/
+img     { height: 500px;
+         margin-left: 20px;
+		 margin-top: 20px;
+		 background-image: url(logo.jpg);
+		 background-size: 100%;
+		 background-repeat: no-repeat;
+		 background-position: center;
+}
+
+/*adds mens sunglasses to mens page*/
+#menbrands {height: 400px;
+		 padding-top: 100px;
+		 padding-bottom: 190px;
+         margin-left: 20px;
+		 margin-top: 20px;
+		 background-image: url(menbrands.jpg);
+		 background-size: 70%;
+		 background-repeat: no-repeat;
+		 background-position: center;
+}
+
+/*adds womens brands to womens page*/
+#womenbrands {height: 400px;
+		 padding-top: 100px;
+		 padding-bottom: 190px;
+         margin-left: 20px;
+		 margin-top: 20px;
+		 background-image: url(womenbrands.jpg);
+		 background-size: 70%;
+		 background-repeat: no-repeat;
+		 background-position: center;
+}
+
+/*creates the form for the rewards page*/
+label {float: left;
+	   display: block;
+	   width: 8em;
+       padding-right: 10px;}
+input {display: block;
+       margin-bottom: 1em;}
+text-area {display: block;
+           padding-left: 10px;
+           margin-bottom: 1em;}
+#mySubmit {margin-left: 10em;}
+
+/*adding table elements to configure a table description for product*/
+table {margin: auto;
+	   border: 1px;
+	   border-color: #3399cc;
+	   width: 90%;
+	   border-collapse: collapse;}
+td, th {padding: 5px;
+		border: 1px solid #3399cc;}
+td {text-align: center;}
+#text {text-align: left;}
+tr:nth-of-type(even) {background-color: #F5FAFC;}
+
+header, nav, main, footer {display: block;} 	
