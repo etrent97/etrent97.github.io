@@ -82,6 +82,13 @@ footer	{font-size: .70em;
 		 box-shadow: 2px 2px 2px #CCD1D1;
 }
 
+/*adds image centered to the index page */
+#sunglass {height: 300px;
+		   background-image: url(sunglasshop.jpg);
+		   background-size: 100%;
+		   background-repeat: no-repeat;   
+}
+
 /*adds brands to brands page with centered content*/
 img     { height: 500px;
          margin-left: 20px;
