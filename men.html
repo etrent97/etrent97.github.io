@@ -24,6 +24,44 @@ Date: July 11, 2017
 <style>
 h2 {padding-left: 20px;}
 
+form {
+   border: 1px solid #3399cc;
+   padding: 5px;
+   height: 110px;
+  }
+fieldset {
+   padding: 1em;
+   border: none;
+   float: left;
+   width: 29.5%;
+  }
+input {
+   font-size: 1em;
+   width: 4em;
+   clear: left;
+  }
+input:focus {
+   background: #F5FAFC;
+  }
+label {
+   display: block;
+  }
+input, label, button, form p {
+   float: left;
+   margin: 5px 10px;
+  }
+p {
+   clear: left;
+}
+p#yValue {
+   width: 2.9em;
+   font-size: 1.1em;
+   height: 1.4em;
+   background: #F5FAFC;
+   padding: 0.2em;
+   overflow: hidden;
+}
+
 </style>
 
 </head>
@@ -97,6 +135,40 @@ h2 {padding-left: 20px;}
 			<td>$219</td>
 		</tr>
 	</table>
+	
+	<br>
+	
+	<form>
+		<fieldset>
+			<label for="xValue">Enter Retail Cost</label>
+			<input type="number" id="xValue" />
+		</fieldset>
+		<fieldset>
+			<button type="button" id="button">Calculate Tax</button>
+		</fieldset>
+		<fieldset>
+			<p>Final Cost</p>
+			<p id="yValue"></p>
+		</fieldset>
+	</form>
+	<script>
+
+	function calcTotal () {
+	
+		var x = document.getElementById("xValue").value;
+		
+		var y = (x * 1.08);
+		
+		document.getElementById("yValue").innerHTML = y;
+	
+	}
+	
+		document.getElementById("button").
+				
+			addEventListener("click", calcTotal, false);
+	
+	</script>
+
 
 <footer>
 	<br>
@@ -108,6 +180,7 @@ h2 {padding-left: 20px;}
 </main>
 
 </div>
+
 
 </body>
 
