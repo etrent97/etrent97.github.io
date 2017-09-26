@@ -25,6 +25,7 @@ Date: September 11, 2017
 </script>
 <![endif]-->
 
+
 </head>
 
 <body>
@@ -57,7 +58,32 @@ Date: September 11, 2017
 	Commitment to delivering exceptional knowledge of every brand and offering styles to accomodate any consumer keeps Sun Optics Eyeware
 	the leading retailer in the sunglass industry.
 	</p>
-
+	
+<!--creates the checkbox element to go with the conditional statement-->	
+	<article>
+      <h3>Brands Savings: (Choose multiple too see your savings on multiple pairs!)</h3>
+      <form>
+		<label for="item1">Ray Ban</label>
+         <input type="checkbox" id="item1" value="10"/>
+          <label for="item2">Oakley</label>
+         <input type="checkbox" id="item2" value="10"/>
+         <label for="item3">Maui Jim</label>
+         <input type="checkbox" id="item3" value="20"/>
+        <label for="item4">Persol</label>
+         <input type="checkbox" id="item4" value="40"/>
+         <label for="item5">Bvlgari</label>
+         <input type="checkbox" id="item5" value="30"/>
+		 <br>
+         <input type="button" value="Submit" id="sButton" />
+      </form>
+	  <div>
+         <p id="total"></p>
+      </div>
+     </article>
+	 <br>
+	 <br>
+	
+	 
 <div>
 Sun Optics Eyewear<br>
 1200 Sun Drive<br>
@@ -68,7 +94,9 @@ San Francisco, CA 95555<br>
 <a id="mobile" href="tel:1-800-786-9327">1-800-SUNWEAR</a>
 
 <br>
+
 </div>
+
 
 <footer>
 	<br>
@@ -80,6 +108,43 @@ San Francisco, CA 95555<br>
 </main>
 
 </div>
+
+<script>
+			
+		function calcTotal() {
+		
+			var itemTotal = 0
+		
+			var items = document.getElementsByTagName("input");
+			
+			for (var i = 0; i < 5; i++) {
+			
+				if (items[i].checked) {
+			
+					itemTotal += (items[i].value * 1);
+				
+				}
+			}
+		
+			
+			document.getElementById("total").innerHTML = "Your total savings is $" + itemTotal + ".00";
+			
+		
+		}
+		
+		var submitButton = document.getElementById("sButton");
+			
+			if (submitButton.addEventListener) {
+			
+				submitButton.addEventListener("click", calcTotal, false);
+				
+			} else if (submitButton.attachEvent) {
+			
+				submitButton.attachEvent("onClick", calcTotal);
+			}
+
+</script>
+
 
 </body>
 

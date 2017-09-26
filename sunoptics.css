@@ -34,6 +34,9 @@ h1 	    {text-indent: 100%;
 h2		{color: #17202A;
 		 text-shadow: 2px 2px 0  #CCD1D1;
 }
+h3		{color: #17202A;
+		 text-shadow: 2px 2px 0  #CCD1D1;
+}
 
 /*gives attributes to the navigation bar*/
 nav {background-color: #CCD1D1;
@@ -149,5 +152,29 @@ tr:nth-of-type(even) {background-color: #F5FAFC;}
 
 header, nav, main, footer {display: block;} 	
 
-/* form styles */
+/* article style elements */
+
+article {
+   width: 960px;
+   height: 250px;
+   text-align: left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
