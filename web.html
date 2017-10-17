@@ -1,0 +1,139 @@
+<!-- Sun Optical Eyewear
+
+Author: Elijah Trent
+
+Date: September 11, 2017
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sun Optics</title>
+<meta charset="utf-8">
+
+<!--links to external style sheet-->
+<link rel="stylesheet" href="sunoptics.css">
+
+<!--script modernizr-->
+ <script src="modernizr.custom.05819.js"></script>
+
+<!--Add HTML5 shim code-->
+<!--[If lt IE 9}>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<!--wrapper boxes in main content-->
+<div id="wrapper">
+
+<header>
+	<h1>Sun Optics Eyewear</h1>
+</header>
+
+<!--cascading navigation to be vertical accross website-->
+<nav>
+	<a href="index.html">Home</a> &nbsp;
+	<a href="brands.html">Brands</a> &nbsp;
+	<a href="men.html">Men</a> &nbsp;
+	<a href="women.html">Women</a> &nbsp;
+	<a href="rewards.html">Rewards</a> &nbsp;
+	<a href="web.html">Web</a> &nbsp; 
+</nav>
+
+<main>
+
+	<h2>This page is here to educate visitors about web security:</h2>
+	
+	<p>Web security is the act of protecting websites from attacks such as unauthorized
+	access or even website disruption. Website design principles require effort in a designing
+	a secure website for users. There are many forms of website attacks that can completely 
+	compromise the website and any of the users personal information of whatever the attacker 
+	was going for. There are many safe practices to go by when building a website to ensure
+	it has web security in place to avoid malicious attacks. </p>
+	
+	<!--Displays the script for the navigator and screen propertis-->
+	<h3>Examples of how navigator and screen object properties gather user computer information:</h3>
+	<ul style="list-style-type: none">
+	<li></li>
+	<br>
+	<li></li>
+	<br>
+	<li></li>
+	<br>
+	<li></li>
+	<br>
+	<li></li>
+	<br>
+	<li></li>
+	</ul>
+	
+	<h3>Best practices for using the web safely:</h3>
+	
+	<ol>
+	<li><a href="http://www.tabush.com/blog/safe-internet-browsing-best-practices" target="tabush">tabush.com</a></li>
+		<ul>
+		<li>This website gives plenty of tips on safe ways browse the web such as watching out for downloads, scrutinizing search links
+			and being secure with your email.</li>
+		</ul>
+		<br>
+	
+	<li><a href="https://www.getsafeonline.org/protecting-your-computer/safe-internet-use/" target="getsafeonline">getsafeonline.org</a></li>
+		<ul>
+		<li>Throughout this site it first implicates the risks of browsing the web unsafely then goes into a detailed list of common sense 
+			ways to browse the web without harming you computer.</li>
+		</ul>
+		<br>
+	
+	<li><a href="https://support.mozilla.org/en-US/kb/how-stay-safe-web" target="tabush">mozilla.org</a></li>
+		<ul>
+		<li>This website educates users on how to keep the browser safe by keeping the software up to date, checking the browser settings, and 
+			notifying the user of other handy browsing tips.</li>
+		</ul>
+	
+
+<footer>
+	<br>
+	Copyright &copy; 2017 Sun Optics Eyewear
+	<br>
+	<small><i><a href="email.html">shades4you@optics.com</a></i></small>
+</footer>
+
+</main>
+
+</div>
+
+	<div>
+	<script>
+	// This script will display the navigator and screen object properties that gather information about a computer.
+	
+	// gathers name of web browser displaying page
+	document.getElementsByTagName("li")[0].innerHTML = "Web browser name: " + navigator.appName;
+	
+	// gathers version of web browser
+	document.getElementsByTagName("li")[1].innerHTML = "Web browser version: " + navigator.appVersion;
+	
+	// contains information about the browser, platform, and compatibility
+	document.getElementsByTagName("li")[2].innerHTML = "Operating system: " + navigator.platform;
+	
+	// gathers width of display screen
+	document.getElementsByTagName("li")[3].innerHTML = "Screen width: " + screen.width;
+	
+	// gathers height of display screen
+	document.getElementsByTagName("li")[4].innerHTML = "Screen height: " + screen.height;
+	
+	// gathers screens color resolution in bits per pixel
+	document.getElementsByTagName("li")[5].innerHTML = "Screen resolution: " + screen.pixelDepth;
+   
+   </script>
+	</div>
+
+
+</body>
+
+</html>
