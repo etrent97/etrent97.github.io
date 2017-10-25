@@ -1,0 +1,83 @@
+<!-- Sun Optical Eyewear
+
+Author: Elijah Trent
+
+Date: July 11, 2017
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sun Optics</title>
+<meta charset="utf-8">
+
+<!--use of link to CSS Style Sheet-->
+<link rel="stylesheet" href="sunoptics.css">
+
+<!--Add HTML5 shim code-->
+<!--[If lt IE 9}>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<header>
+	<h1>Sun Optics Eyewear</h1>
+</header>
+
+<nav>
+	<a href="index.html">Home</a> &nbsp;
+	<a href="brands.html">Brands</a> &nbsp;
+	<a href="men.html">Men</a> &nbsp;
+	<a href="women.html">Women</a> &nbsp;
+	<a href="rewards.html">Rewards</a> &nbsp;
+	<a href="web.html">Web</a> &nbsp; 
+</nav>
+
+<main>
+
+<h2>Review your submitted info!</h2>
+
+
+
+
+<script>
+			var formData = location.search;
+             formData = formData.substring(1, formData.length);
+             while (formData.indexOf("+") !== -1) {
+                formData = formData.replace("+", " ");
+             }
+             formData = decodeURIComponent(formData);
+             var formArray = formData.split("&");
+             for (var i = 0; i < formArray.length; i = i + 1) {
+                document.write("<p>" + formArray[i] + "</p>");
+             }
+</script>
+
+<footer>
+	<br>
+	Copyright &copy; 2017 Sun Optics Eyewear
+	<br>
+	<small><i><a href="email.html">shades4you@optics.com</a></i></small>
+</footer>
+
+</main>
+
+</div>
+
+</body>
+
+</html>
+
+
+

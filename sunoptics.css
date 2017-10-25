@@ -136,7 +136,22 @@ input {display: block;
 text-area {display: block;
            padding-left: 10px;
            margin-bottom: 1em;}
-#mySubmit {margin-left: 10em;}
+input#firstName {width: 8em;}
+input#lastName {width: 8em}
+input#address {width: 16em;}
+input#zip {width: 4em;}
+input#btnSubmit {margin-left: 10.5em;}
+
+/*div for errorText */
+div#errorText {
+   border: 1px solid;
+   background: white;
+   width: 80%;
+   margin: 0 auto;
+   padding: 10px;
+   display: none;
+}
+
 
 /*adding table elements to configure a table description for product*/
 table {margin: auto;
