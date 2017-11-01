@@ -23,6 +23,7 @@ Date: July 11, 2017
 
 <style>
 
+
 </style>
 
 </head>
@@ -135,6 +136,25 @@ Date: July 11, 2017
 	
 </form>
 
+<form>
+	<fieldset>
+			<legend>Date of original purchase</legend>
+			<br>
+            <label for="dateSelected">
+              Select date
+            </label>
+            <input type="date" id="dateSelected" />
+	</fieldset>
+	<fieldset>
+			
+			<button type="button" id="button">Calculate time</button>
+	</fieldset>
+	<fieldset>
+			<p>Time since last purchase</p>
+			<p id="elapsedTime"></p>
+    </fieldset>
+</form>
+
 <footer>
 	<br>
 	Copyright &copy; 2017 Sun Optics Eyewear
@@ -147,6 +167,7 @@ Date: July 11, 2017
 </div>
 
 <script src="rewards.js"></script>
+<script src="rewards1.js"></script>
 
 <!-- Throughout the coding process of the script i encountered a lot of trial
 and error isues with the code. One of the main concepts that i took away from 
