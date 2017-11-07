@@ -116,15 +116,29 @@ function brandArray() {
 	
 		brand.push(brandName); // if brand checked pushes it to an array element
 		
-	} else {
+		var brandList = document.createElement("li") // creates list element for brand list variable
 		
-		var inputCheck = document.getElementsByName("brand");
+		brandList.innerHTML = brandName; // adds brand to rewards page
+		document.getElementById("preferedBrand").appendChild(brandList); // adds brand to favorites list on rewards page
+		
+		// makes favorites list visible
+		document.getElementById("prefered").style.display = "block";
+		document.getElementById("brandSelection").style.display = "block";
+		
+	} else { 
+		
+		var inputCheck = document.querySelectorAll("#preferedBrand li");
 		
 		for (var i = 0; i < inputCheck.length; i++) { // checks when boxes are unchecked
 			
-			if (inputCheck[i].checked === false) {
+			if (inputCheck[i].innerHTML === brandName) {
 		
 		brand.splice(i, 1); // removes unchecked boxes from array
+		
+			// removes choices from favorites list on rewards page
+			
+			inputCheck[i].parentNode.removeChild(inputCheck[i]);
+			break;
 		
 				}
 			}
