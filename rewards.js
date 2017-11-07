@@ -1,6 +1,6 @@
 /* File Name: rewards.js
    Author: Elijah Trent
-   Date: 10/23/17 
+   Date: 11/6/17 
    
    This is the new updated form validation page
    
@@ -12,6 +12,10 @@
 // global variable
 
 var formValidity = true;
+
+var brand = [];
+
+var arrayString;
 
 /* function will validate required fields */
 
@@ -94,6 +98,45 @@ function validateForm(evt) { // fires event when submit button is clicked
 	}
 }
 
+//CHAPTER 8 functions
+
+/* Adds brand choice to an array */
+function brandArray() {
+	
+	if (event === undefined) { //gets caller element in IE8
+		
+		event = window.event;
+	}
+	
+	var callerElement = event.target || event.srcElement;
+	
+	var brandName = callerElement.value; // adds callerElement to variable brandName
+	
+	if (callerElement.checked) { 
+	
+		brand.push(brandName); // if brand checked pushes it to an array element
+		
+	} else {
+		
+		var inputCheck = document.getElementsByName("brand");
+		
+		for (var i = 0; i < inputCheck.length; i++) { // checks when boxes are unchecked
+			
+			if (inputCheck[i].checked === false) {
+		
+		brand.splice(i, 1); // removes unchecked boxes from array
+		
+				}
+			}
+		}
+}
+
+/* Function convert to string */
+function convertToString() {
+
+		arrayString = brand.toString(); // adds the brand string to global variable arrayString
+}
+
 /* create event listeners */
 
 function createEventListeners() { // this code creates an event listener on the submit event
@@ -110,6 +153,34 @@ function createEventListeners() { // this code creates an event listener on the 
 		
 	}
 	
+	// CHAPTER 8 event listeners
+	
+	var brands = document.getElementsByName("brand"); // adds event listener to add brands to an array
+	
+	if (brands[0].addEventListener) {
+		
+		for (var i = 0; i < brands.length; i++) {
+			
+			brands[i].addEventListener("change", brandArray, false);
+		}
+	} else if (brands[0].attachEvent) {
+		
+		for (var i = 0; i < brands.length; i++) {
+			
+			brands[i].attachEvent("onchange", brandArray);
+		}
+	}
+	
+	var button = document.getElementById("btnSubmit"); // adds an event listener to convert array to string on click of submit button
+	
+	if (button.addEventListener) {
+		
+		button.addEventListener("click", convertToString, false);
+		
+	} else if (button.attachEvent) {
+		
+		button.attachEvent("onclick", convertToString);
+	}
 }
 
 /* run setup functions when page finished loading */
