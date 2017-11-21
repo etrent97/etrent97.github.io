@@ -25,6 +25,25 @@ Date: September 11, 2017
 </script>
 <![endif]-->
 
+<style>
+
+#map {
+  
+   width: 100%;
+   min-height: 300px;
+}
+
+#caption {
+   text-align: center;
+   width: 100%;
+   float: left;
+   clear: left;
+   margin: 0.5em 0;
+   font-weight: bold;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -95,8 +114,36 @@ Date: September 11, 2017
 		<li>This website educates users on how to keep the browser safe by keeping the software up to date, checking the browser settings, and 
 			notifying the user of other handy browsing tips.</li>
 		</ul>
-	
+		
+<br>
+<br>	
+    <article>
+	  <div id="wrapper">
+      <div id="caption">
+         Your location
+      </div>
+      <div id="map"></div>
+	  </div>
+   </article>
+   
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+    <ul style="list-style-type: none">
+		<li></li>
+		<br>
+		<li></li>
+		<br>
+		<li></li>
+		<br>
+	</ul>
 
+<br>
+<br>
+<br>
 <footer>
 	<br>
 	Copyright &copy; 2017 Sun Optics Eyewear
@@ -131,6 +178,13 @@ Date: September 11, 2017
 	document.getElementsByTagName("li")[5].innerHTML = "Screen resolution: " + screen.pixelDepth;
    
    </script>
+   
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARK6gX2Ziot-4y6bw2klQyHjWSk87Lklw&callback=geoTest"
+   
+	type="text/javascript"></script> 
+  
+  <script src="web.js"></script>
+   
 	</div>
 
 
