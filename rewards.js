@@ -1,6 +1,6 @@
 /* File Name: rewards.js
    Author: Elijah Trent
-   Date: 11/6/17 
+   Date: 12/4/17 
    
    This is the new updated form validation page
    
@@ -23,7 +23,7 @@ function validateRequired() {
 	
 	var inputElements = document.querySelector("form"); // calls upon form tag and all the inputs within
 	
-	var errorDiv = document.getElementById("errorText"); // grabs the error text and puts in a variable called errorDiv
+//	var errorDiv = document.getElementById("errorText"); // grabs the error text and puts in a variable called errorDiv
 	
 	var elementCount = inputElements.length;
 	
@@ -57,17 +57,29 @@ function validateRequired() {
 			
 		}
 		
-		errorDiv.style.display = "none"; // styles the error message
+//		errorDiv.style.display = "none"; // styles the error message
 		
-		errorDiv.innerHTML = ""; 
+//		errorDiv.innerHTML = ""; 
+
+
+		$("#errorText").hide(); //replaces with css jquery animation method
+		
+		$("#errorText").html(""); //adds to inner HTML
+		
+		
 		
 		}
 		
 		catch(msg) {
 			
-			errorDiv.style.display = "block";
+//			errorDiv.style.display = "block";
 			
-			errorDiv.innerHTML = msg;
+//			errorDiv.innerHTML = msg;
+
+		$("#errorText").show();
+		
+		$("#errorText").html(msg);
+
 			
 			formValidity = false;
 			
@@ -78,15 +90,18 @@ function validateRequired() {
 
 function validateForm(evt) { // fires event when submit button is clicked
 	
-	if (evt.preventDefault) { // blocks action associated with event
+//	if (evt.preventDefault) { // blocks action associated with event
 		
-		evt.preventDefault(); // prevents form from submitting
+//		evt.preventDefault(); // prevents form from submitting
 		
-	} else {
+//	} else {
 		
-		evt.returnValue = false; // prevents from submitting in IE8
+//		evt.returnValue = false; // prevents from submitting in IE8
 		
-	}
+//	}
+
+	event.preventDefault();
+
 	
 	formValidity = true; 
 	
@@ -94,8 +109,14 @@ function validateForm(evt) { // fires event when submit button is clicked
 	
 	if (formValidity === true) {
 		
-		document.getElementsByTagName("form")[0].submit();
-	}
+//		document.getElementsByTagName("form")[0].submit();
+	
+	$("form").submit();
+	
+	} 
+	
+	
+	
 }
 
 //CHAPTER 8 functions
@@ -155,7 +176,7 @@ function convertToString() {
 
 function createEventListeners() { // this code creates an event listener on the submit event
 	
-	var form = document.getElementsByTagName("form")[0];
+/*	var form = document.getElementsByTagName("form")[0];
 	
 	if (form.addEventListener) {
 		
@@ -166,6 +187,9 @@ function createEventListeners() { // this code creates an event listener on the 
 		form.attachEvent("onsubmit", validateForm);
 		
 	}
+*/
+	$("#btnSubmit").click(validateForm);
+
 	
 	// CHAPTER 8 event listeners
 	
